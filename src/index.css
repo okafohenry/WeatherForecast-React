@@ -33,6 +33,12 @@ nav{
 	color: #fff;
 	padding: 15px 10px 15px 50px ;
 }
+.load_img{
+	position: relative;
+	top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 
 .weath-disp{	

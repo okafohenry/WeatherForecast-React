@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import './index.css';
 import Nav from './nav';
+import LoadingIcon from './loading_icon';
 import WeatherDisplay from './weatherdisplay';
 import WeatherDetail from './WeatherDetail';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -18,20 +19,23 @@ constructor(props){
 	super(props);
 
 	this.state = {
-		reports : []
+		reports : [],
+		loading : false
 	}
 
 }
 
 componentDidMount(){
-	axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=abuja,ng&appid=${API_KEY}&units=metric`)
+	this.setState({ loading: true }, () =>{
+			axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=abuja,ng&appid=${API_KEY}&units=metric`)
 		.then(response  => { 
 			const reports = response.data.list	
-			this.setState({reports});
+			this.setState({ loading: false, reports});
 			//console.log(reports)
-			}
-		)
+			})
 		.catch( error => console.log(error)	);
+	});
+
 	
 }
 
@@ -41,17 +45,19 @@ componentDidMount(){
 
 	render(){
 		return(
-			<Router>
-				<div className="weather-forecast">
-					<Nav value={"Weather Forecast"} />
-					<Switch>
-					<Route path="/" exact render={(props) => <WeatherDisplay {...props}   reports={this.state.reports} /> }  />
-					<Route path="/:nameOfDay" component={WeatherDetail} />
-					</Switch>
-				</div>
-				
-			</Router>
-			
+				<Router>
+					<div className="weather-forecast">
+						<Nav value={"Weather Forecast"} />
+						{
+						 this.state.loading ? <LoadingIcon /> :
+							<Switch>
+							<Route path="/" exact render={(props) => <WeatherDisplay {...props}   reports={this.state.reports} /> }  />
+							<Route path="/:nameOfDay" component={WeatherDetail} />
+							</Switch>
+						}
+					</div>
+					
+				</Router>
 		);
 	}
 }
