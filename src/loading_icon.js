@@ -3,7 +3,7 @@ import Loading from './loading_img.gif';
 
 
 const LoadingIcon = () => ( 
-	<div>
+	<div className="loading-icon">
 		<img src={Loading} alt="loading..." className="load_img" /> 
 	</div>
 );

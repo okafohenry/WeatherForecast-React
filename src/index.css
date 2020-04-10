@@ -33,9 +33,10 @@ nav{
 	color: #fff;
 	padding: 15px 10px 15px 50px ;
 }
-.load_img{
+.loading-icon{
 	position: relative;
-	top: 100px;
+	top: 200px;	
+	left: 45%;
 	margin-left: auto;
 	margin-right: auto;
 }
