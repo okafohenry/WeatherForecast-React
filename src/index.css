@@ -33,9 +33,22 @@ nav{
 	color: #fff;
 	padding: 15px 10px 15px 50px ;
 }
-.loading-icon{
+.entry{
+	max-width: 320px;
+	margin-right: auto;
+	margin-left: auto;
 	position: relative;
-	top: 200px;	
+	top: 50px;
+}
+.search_box{
+	width: 250px;
+}
+.search_box,.btn-search{
+	padding: 5px;
+}
+.loading-icon{
+	position: absolute;
+	top: 250px;	
 	left: 45%;
 	margin-left: auto;
 	margin-right: auto;
@@ -44,7 +57,8 @@ nav{
 
 .weath-disp{	
 	width: 50%;
-	margin-top: 30px;
+	position: relative;
+	top:70px;
 	margin-left: auto;
 	margin-right: auto;
 }

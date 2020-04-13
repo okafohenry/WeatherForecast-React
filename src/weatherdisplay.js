@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const WeatherDisplay = ({reports}) => { 
+const WeatherDisplay = (props) => { 
 	
 ///multiply timestamp(day) by 1000(milliseconds) 
 //handles timestamp conversion to day
@@ -14,9 +14,10 @@ const WeatherDisplay = ({reports}) => {
 
 	return( 
 	<div className="weath-disp">
+		{props.location}
 		<ul className="weath-disp-list">
 			{
-			reports.filter((report, i) => i % 8 === 0)
+			props.reports.filter((report, i) => i % 8 === 0)
 			.map(report => ( 
 				<Link to={`/${handleDay(report.dt)}`}>
 					<li key={report.dt} className="weather-item">
