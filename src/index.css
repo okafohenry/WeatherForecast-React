@@ -33,6 +33,7 @@ nav{
 	color: #fff;
 	padding: 15px 10px 15px 50px ;
 }
+/************  Entry.js  *****************/
 .entry{
 	max-width: 320px;
 	margin-right: auto;
@@ -46,6 +47,8 @@ nav{
 .search_box,.btn-search{
 	padding: 5px;
 }
+
+/************  WeatherDisplay.js  ****************/
 .loading-icon{
 	position: absolute;
 	top: 250px;	
@@ -56,11 +59,12 @@ nav{
 
 
 .weath-disp{	
-	width: 50%;
+	width: 45%;
 	position: relative;
-	top:70px;
+	top:100px;
 	margin-left: auto;
 	margin-right: auto;
+	align-items: center;
 }
 .weath-disp-list li{	
 	font-family: sans-serif;
@@ -70,7 +74,8 @@ nav{
 }
 
 
-/********weather-item overlay*********/
+/*********** overlay.js *********/
+
 .weather-item{
 	opacity: 1;
 	height: auto;
@@ -104,17 +109,38 @@ nav{
 .weather-item:hover .text-cont{
 	opacity: .7;
 } 
+
+/*************  WeatherDetail.js  ****************/
+.weather-detail{
+	width: 37%;
+	height: 550px;
+	background: blue;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 70px;
+	padding: 10px;
+}
+.weather-detail li{
+	display: inline-block;
+}
+
+/***************  Day.js  *****************/
 .day{
 	font-family: "arial";
 	font-size: 16px;
 	color: #cbcbcb;
 	text-transform: capitalize;
 }
+
+/**************  TempMax.js  **************/
 .temp-max{
 	font-size: 14.5px;
 	color: #ababab;	
 	font-weight: bold;
 }
+
+/**************  TempMax.js  **************/
 .temp-min{	
 	margin-left: 4px;
 	font-size: 14.5px;

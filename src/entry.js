@@ -3,7 +3,7 @@ import React from 'react';
 const Entry = (props) => (
 	<div className="entry">
 		<input
-			placeholder="city,country e.g Abuja,NG"
+			placeholder="city name e.g Abuja"
 			className="search_box"
 			type="text"
 			onChange={props.handleChange}

@@ -21,7 +21,7 @@ constructor(props){
 
 	this.state = {
 		data : "",
-		location: {},
+		location: "",
 		reports : [],
 		loading : false
 	}
@@ -54,24 +54,6 @@ handleClick(){
 		}
 }
 
-/**
-componentDidMount(){
-	this.setState({ loading: true }, () =>{
-			axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=abuja,ng&appid=${API_KEY}&units=metric`)
-		.then(response  => { 
-			const reports = response.data.list	
-			this.setState({ loading: false, reports});
-			//console.log(reports)
-			})
-		.catch( error => console.log(error)	);
-	});
-
-	
-}
-**/
-
-
-
 
 	render(){
 		return(
@@ -84,8 +66,15 @@ componentDidMount(){
 						{
 						 this.state.loading ? <LoadingIcon /> :
 						<Switch>
-							<Route path="/" exact render={(props) => <WeatherDisplay {...props} location={this.state.location}   reports={this.state.reports} /> }  />
-							<Route path="/:nameOfDay" component={WeatherDetail} />
+							<Route path="/" exact 
+									render={(props) => <WeatherDisplay {...props} 
+									location={this.state.location}   
+									reports={this.state.reports} /> }  />
+
+							<Route path="/:nameOfDay" 
+									render={(props) =>  <WeatherDetail {...props} 
+									data={this.state.data} 
+									location={this.state.location} />} />
 						</Switch>
 						}
 					</div>

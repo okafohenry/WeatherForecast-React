@@ -1,5 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Day from './day';
+import Icon from './icon';
+import TempMax from './tempmax';
+import TempMin from './tempmin';
+import Overlay from './overlay';
 
 const WeatherDisplay = (props) => { 
 	
@@ -25,9 +30,7 @@ const WeatherDisplay = (props) => {
 						<Icon icon={report.weather[0].icon} />
 						<TempMax temp={report.main.temp_max} />
 						<TempMin temp={report.main.temp_min} />
-						<div className="text-cont">
-							<div className="text"> click for more </div>
-						</div>
+						<Overlay />
 					</li>
 				</Link>
 				))
@@ -37,25 +40,6 @@ const WeatherDisplay = (props) => {
 	);
 }
 
-
-
-const Day = ({day}) => (
-	<div className="day">{day}</div>
-);
-
-const Icon = ({icon}) => (
-	<div>
-		<img src={`http://openweathermap.org/img/w/${icon}.png`}  alt="weather_icon" />
-	</div>
-);
-
-const TempMax = ({temp}) => (
-	<span className="temp-max">{temp}&#176;</span>
-);
-
-const TempMin = ({temp}) => (
-	<span className="temp-min">{temp}&#176;</span>
-);
 
 
 
