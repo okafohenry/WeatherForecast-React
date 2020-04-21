@@ -10,7 +10,7 @@ const Entry = (props) => (
 		 />
 		<button 
 			onClick={props.handleClick} 
-			className="btn btn-search">search</button>
+			className="btn-search">search</button>
 	</div>
 );
 

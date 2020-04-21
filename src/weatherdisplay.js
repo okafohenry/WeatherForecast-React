@@ -19,7 +19,9 @@ const WeatherDisplay = (props) => {
 
 	return( 
 	<div className="weath-disp">
-		{props.location}
+		<div className="weath-location">
+			<h3>{props.location}</h3>
+		</div>
 		<ul className="weath-disp-list">
 			{
 			props.reports.filter((report, i) => i % 8 === 0)

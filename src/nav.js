@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Nav = ({value}) => ( 
-	<div className="nav">
+	<div className="weather-nav">
 		<nav>{value}</nav>
 	</div>
 );

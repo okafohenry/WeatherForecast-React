@@ -5,6 +5,7 @@ import Icon from './icon';
 import TempMax from './tempmax';
 import TempMin from './tempmin';
 import Description from './description';
+import Return from './return';
 
 
 const API_KEY = "e102cc873d6623291973f74bc86a9d13";
@@ -50,7 +51,7 @@ const API_KEY = "e102cc873d6623291973f74bc86a9d13";
 					if(dayName === this.props.match.params.nameOfDay){
 						
 						str = this.state.data[i].dt_txt
-						dateTime = str.substr(11,8);  //extracts the next 8 strings starting from the 11th string
+						dateTime = str.substr(11,8);  //extracts the next 8 character starting from the 11th char.
 						maxTemp = this.state.data[i].main.temp_max;
 						minTemp  = this.state.data[i].main.temp_min;
 						icon = this.state.data[i].weather[0].icon;
@@ -71,19 +72,24 @@ const API_KEY = "e102cc873d6623291973f74bc86a9d13";
 	render(){
 		return(
 			<div className="weather-detail">
-				<div>{this.props.location}</div>
-				<div>{this.props.match.params.nameOfDay}</div>
-				<ul>
+				<div className="weath-location">
+					<h3>{this.props.location}</h3>
+				</div>
+				<div className="day-name">
+					<h4>{this.props.match.params.nameOfDay}</h4>
+				</div>
+				<ul className="row">
 				{ this.state.details.map(detail => ( 
-					<li key={detail.id}>
+					<li key={detail.id} className="col-md-3">
 						<div>Time: {detail.dateTime}</div>
 						<Icon icon={detail.icon} />
-						<TempMin temp={`Min_Temp: ${detail.minTemp}`} />
+						<TempMin temp={`Min_Temp: ${detail.minTemp}`} /><br/>
 						<TempMax temp={`Max_Temp: ${detail.maxTemp}`} />
-						<Description desc={`Description: ${detail.weathDesc}`} />
+						<Description desc={`Desc: ${detail.weathDesc}`} />
 					</li>
 				))}
 				</ul>
+				<Return className="col-md-12" />
 			</div>
 		);
 			
