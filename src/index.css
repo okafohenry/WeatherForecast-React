@@ -176,3 +176,20 @@ nav{
 	margin-bottom: 50px;
 }
 
+@media (min-width: 771px){
+	.return-btn{
+		position: relative;
+		left: 55px;
+	}
+}
+@media (min-width: 250px) and (max-width: 669px){
+	.return-btn{
+		width: 100%;
+	}
+		.ret-btn-cont{
+		min-width: 100px;
+	}
+}
+
+
+
