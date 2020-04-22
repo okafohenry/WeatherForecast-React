@@ -1,19 +1,3 @@
-/**body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-**/
-
 *{
 	margin: 0;
 	padding: 0;
@@ -33,6 +17,11 @@ nav{
 	color: #fff;
 	padding: 15px 10px 15px 50px ;
 }
+
+
+
+
+
 /************  Entry.js  *****************/
 .entry{
 	max-width: 320px;
@@ -47,6 +36,9 @@ nav{
 .search_box,.btn-search{
 	padding: 3px 10px 3px 10px;
 }
+
+
+
 
 /************  WeatherDisplay.js  ****************/
 .loading-icon{
@@ -72,6 +64,8 @@ nav{
 	cursor: pointer;	
 	text-align: center;
 }
+
+
 
 
 /*********** Overlay.js *********/
@@ -110,6 +104,8 @@ nav{
 	opacity: .7;
 } 
 
+
+
 /*************  WeatherDetail.js  ****************/
 .weather-detail{
 	width: 50%;
@@ -136,15 +132,30 @@ nav{
 @media (min-width: 771px){
 	.weather-detail ul{
 		position: relative;
-		left: 50px;
+		left: 70px;
 	}
 }
+
+
+.det-time{
+	font-size: 14px;
+	font-family: "Segoe UI", "Roboto", "Oxygen","Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+
 /***************  Day.js  *****************/
 .day{
 	font-family: "arial";
 	font-size: 16px;
 	color: #cbcbcb;
 	text-transform: capitalize;
+}
+
+
+
+/*********** Description.js  *************/
+.weather_desc{
+	font-size: 14px;
 }
 
 /**************  TempMax.js  **************/
@@ -154,13 +165,14 @@ nav{
 	font-weight: bold;
 }
 
-/**************  TempMax.js  **************/
+
+
+/**************  TempMix.js  **************/
 .temp-min{	
 	margin-left: 4px;
 	font-size: 14.5px;
 	color: #cbcbcb;
 }
-/**************  location.js  **************/
 
 
 /*************** Return.js  *****************/
@@ -179,7 +191,7 @@ nav{
 @media (min-width: 771px){
 	.return-btn{
 		position: relative;
-		left: 55px;
+		left: 80px;
 	}
 }
 @media (min-width: 250px) and (max-width: 669px){

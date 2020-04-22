@@ -1,10 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+
 import Day from './day';
 import Icon from './icon';
+import Location from './location';
+import Overlay from './overlay';
 import TempMax from './tempmax';
 import TempMin from './tempmin';
-import Overlay from './overlay';
 
 const WeatherDisplay = (props) => { 
 	
@@ -19,9 +21,7 @@ const WeatherDisplay = (props) => {
 
 	return( 
 	<div className="weath-disp">
-		<div className="weath-location">
-			<h3>{props.location}</h3>
-		</div>
+		<Location  location={props.location} />
 		<ul className="weath-disp-list">
 			{
 			props.reports.filter((report, i) => i % 8 === 0)
