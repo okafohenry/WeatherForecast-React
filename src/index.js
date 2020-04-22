@@ -8,7 +8,7 @@ import Entry from './entry.js';
 import LoadingIcon from './loading_icon';
 import WeatherDisplay from './weatherdisplay';
 import WeatherDetail from './WeatherDetail';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 
 
 const API_KEY = "e102cc873d6623291973f74bc86a9d13";
