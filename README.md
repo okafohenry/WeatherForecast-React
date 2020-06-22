@@ -11,7 +11,7 @@ Once launched, The application comprises of only a textbox (where location is en
 
 ## Usage
 Once launched,
-* Type in Location ```(city e.g Abuja, Lagos, Oslo, Abidjan, Denver)``` in the textbox provided.
+* Type in a Location ```(city e.g Abuja, Lagos, Oslo, Abidjan, Denver)``` in the textbox provided.
 * Click ```search``` button to fetch weather details on location.
 * From the displayed Lists showing details per-day for 5 consecutive days, you can click on each day to see more daily details (forecast for every 3hour interval per day)
 * Click on the ```return``` button to go back to index page
