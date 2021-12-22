@@ -16,6 +16,8 @@ Once launched,
 * From the displayed Lists showing details per-day for 5 consecutive days, you can click on each day to see more daily details (forecast for every 3hour interval per day)
 * Click on the ```return``` button to go back to index page
 
+## Live Demonstration : 
+https://okafohenry.github.io/WeatherForecast-React/#/
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
